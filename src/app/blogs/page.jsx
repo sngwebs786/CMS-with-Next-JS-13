@@ -23,6 +23,13 @@ const Blogs = async ({ id }) => {
             <>
               <h1>Blog title : {data.blogTitle}</h1>
               <p>Blog Description : {data.blogDescription}</p>
+              {data.blogDescription2 ? (
+                <>
+                  <p>{data.blogDescription2}</p>
+                </>
+              ) : (
+                <></>
+              )}
               <img
                 src={`https:${data.blogImage.fields.file.url}`}
                 alt="image"
